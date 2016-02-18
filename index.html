@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebCalc</title>
+  <style>
+   body {
+     background-color: black;
+     color: white;
+   }
+
+    input[type=button] {
+        height:25px;
+        width:52px;
+        color: red;
+    }
+
+    .calculator-body-styling {
+      width:275px;
+      height:200px;
+      border:3px solid #2BEA00;
+    }
+
+    .signature {
+      position:absolute;
+      right: 10px;
+      bottom: 10px;
+      color: lightgrey;
+    }
+
+    .page-border {
+      float:right;
+    }
+  </style>
+  <script>
+    function addNumbers(){
+      //Hey this is what pops up when you click submit
+      //https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+      var firstNumber = document.getElementById('number-one').value;
+      var secondNumber = document.getElementById('number-two').value;
+
+      var total = +firstNumber + +secondNumber;
+      document.getElementById("total").value=total;
+    }
+    function subtractNumbers(){
+      var firstNumber = document.getElementById('number-one').value;
+      var secondNumber = document.getElementById('number-two').value;
+
+      var total = +firstNumber - +secondNumber;
+      document.getElementById("total").value=total;
+    }
+    function multiplyNumbers(){
+      var firstNumber = document.getElementById('number-one').value;
+      var secondNumber = document.getElementById('number-two').value;
+
+      var total = firstNumber * secondNumber;
+      document.getElementById("total").value=total
+    }
+    function divideNumbers(){
+      var firstNumber = document.getElementById('number-one').value;
+      var secondNumber = document.getElementById('number-two').value;
+
+      var total = firstNumber / secondNumber;
+      document.getElementById("total").value=total
+    }
+  </script>
+</head>
+  <!--
+    Here's what i'd like to do:
+
+    Be able to input two different numbers, then show the result of adding those two numbers together
+
+    Input box documentation : https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+
+  -->
+  <body >
+    <div class="page-border">
+    <div class="calculator-body-styling">
+      <img SRC="WebCalc.gif" WIDTH=275 HEIGHT=65/>
+      <br/>
+      Number one :
+      <input type="text" id="number-one">
+      <br/>
+      Number two :
+      <input type="text" id="number-two">
+      <input type="button" value="+" onclick="addNumbers()">
+      <input type="button" value="-" onclick="subtractNumbers()">
+      <input type="button" value="x" onclick="multiplyNumbers()">
+      <input type="button" value="÷" onclick="divideNumbers()">
+      <br>
+      Total :
+      <input type="text" id="total">
+    </div>
+    </div>
+
+    <span class="signature">
+      Andrew Hall
+    </span>
+
+
+</body>
+</html>
