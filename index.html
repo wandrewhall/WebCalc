@@ -33,7 +33,68 @@
     }
   </style>
   <script>
-		var a = 1;
+  //Basics behind "function"
+  // function = Keyword name, telling you what it inspect
+  // <INPUT NAME HERE> = Name of function, should almost always be unique
+  // () = Parameters, allow you to send in multiple inputs to your function
+  // return = returns data FROM the function
+
+
+  // var a = 1;
+  // var b = 2;
+  // var c = +a + b
+
+  //&& = AND e.g. (A AND B)
+  //|| = OR e.g. (A OR B)
+
+
+  // if (SOME CONDITION) {
+  //   DO SOME THING
+  // } else{
+  //   DO SOME OTHER THING
+  // }
+
+
+  //Make a function that returns "Fizz" if number is 5, "Buzz" if number is 10
+  //Return "FizzBuzz" If number is neither
+  //Return Bad Number if number is less than 0
+
+  function FuzzYou (inputOne) {
+    if (inputOne === 5) {
+      return "Fizz";
+    }
+
+    if (inputOne === 10) {
+      return "Buzz";
+    }
+
+    if (inputOne<0) {
+      return "BAD NUMBER YO";
+    }
+    return "FizzBuzz";
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     function addNumbers(){
       //Hey this is what pops up when you click submit
@@ -94,11 +155,8 @@
       <input type="text" id="total">
     </div>
     </div>
-
     <span class="signature">
       Andrew Hall
     </span>
-
-
 </body>
 </html>
